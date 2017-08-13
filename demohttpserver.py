@@ -21,7 +21,7 @@ class MyHandler(BaseHTTPRequestHandler):
         if self.path == '/ping':
             self.set_headers()
             self.wfile.write(b'pong')
-            logging.debug('Let\'s play some ping pong')
+            logging.debug('Let\'s play some ping')
         elif self.path == '/kill':
             self.set_headers(status=500)
             self.wfile.write(b'killed')
